@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temirkhan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Temirkhan</div>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" tabindex="0">
+            <h1>About Me</h1>
+            <p>Hello! I'm Temirkhan, a frontend developer in training.</p>
+        </section>
+
+        <section id="projects" tabindex="0">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="project-card" data-category="web">
+                    <img src="p.png" alt="Project 1 image" />
+                    <h3>Website Project</h3>
+                    <p>A simple website project.</p>
+                </div>
+                <div class="project-card" data-category="app">
+                    <img src="m.png" alt="Project 2 image" />
+                    <h3>Mobile App</h3>
+                    <p>An app for mobile devices.</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="a.jpeg" alt="Project 3 image" />
+                    <h3>Portfolio Site</h3>
+                    <p>My personal portfolio website.</p>
+                </div>
+            </div>
+            <div class="filters">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Websites</button>
+                <button onclick="filterProjects('app')">Apps</button>
+            </div>
+        </section>
+
+        <section id="skills" tabindex="0">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <section id="contact" tabindex="0">
+            <h2>Contact</h2>
+            <form id="contactForm" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+                <p id="formMessage" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <span class="close" aria-label="Close">&times;</span>
+        <img class="lightbox-img" src="" alt="Large project image" />
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
